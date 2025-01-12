@@ -39,7 +39,7 @@ h2{
 .slide {
     flex: 0 0 100%;
     scroll-snap-align: start;
-    position: relative;
+    position: absolute;
 }
 
 .slide img {
