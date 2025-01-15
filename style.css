@@ -1,9 +1,14 @@
-body {
-  font-family: Arial, sans-serif;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: gray;
+}
+body {
+  background-image: url('/img/planofundo1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 
@@ -69,6 +74,7 @@ h1 {
   margin: 20px;
   background-color: #f0f0f0;
   text-align: center;
+  opacity: 65%;
   
 }
 
@@ -116,18 +122,22 @@ button {
 
 .concept-item1 {
   background-color: red;
+  font-weight: bold;
 }
 
 .concept-item2 {
   background-color: darkgray;
+  font-weight: bold;
 }
 
 .concept-item3 {
-  background-color: green
+  background-color: green;
+  font-weight: bold;
 }
 
 .concept-item4 {
-  background-color: blue
+  background-color: darkslategray;
+  font-weight: bold;
 }
 
 
@@ -137,5 +147,6 @@ h3 {
 
 
 p {
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
 }

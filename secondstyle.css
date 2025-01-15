@@ -23,5 +23,7 @@ h2 {
 }
 .image-container figcaption {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    font-weight: bold;
 }
