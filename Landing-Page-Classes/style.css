@@ -1,0 +1,294 @@
+/* Reset e estrutura base */
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url('./img/planofundo1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000; /* fallback */
+  overflow-y: auto;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  background-color: red;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Corpo principal */
+main {
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+}
+
+/* Carrossel de Imagens */
+.carousel-container {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  width: 500%;
+  animation: slide 20s infinite;
+}
+
+.carousel-item {
+  width: 20%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  min-height: 60vh;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Animação do Carrossel */
+@keyframes slide {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  25%, 45% {
+    transform: translateX(-20%);
+  }
+  50%, 70% {
+    transform: translateX(-40%);
+  }
+  75%, 95% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
+/* Seções e Formulários */
+.section {
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #f0f0f0;
+  text-align: center;
+  opacity: 0.85;
+  max-width: 1000px;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea,
+button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+li {
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Carrossel horizontal de conceitos */
+.concept-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+  padding: 10px;
+}
+
+.concept-item {
+  flex: 0 0 80%;
+  max-width: 800px;
+  scroll-snap-align: start;
+  margin: auto;
+  padding: 20px;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+.concept-item1 {
+  background-color: red;
+  font-weight: bold;
+}
+
+.concept-item2 {
+  background-color: darkgray;
+  font-weight: bold;
+}
+
+.concept-item3 {
+  background-color: green;
+  font-weight: bold;
+}
+
+.concept-item4 {
+  background-color: darkslategray;
+  font-weight: bold;
+}
+
+/* Títulos */
+h2 {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  color: blue;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+/* Textos */
+p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Galeria de imagens */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.image-container figcaption {
+  text-align: center;
+  margin-top: 10px;
+  background-color: whitesmoke;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .carousel {
+    width: 500%;
+  }
+
+  .carousel-item {
+    width: 100%;
+  }
+
+  .carousel-container {
+    max-height: unset;
+  }
+
+  .carousel-item img {
+    min-height: 50vh;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p,
+  li {
+    font-size: 20px;
+  }
+
+  .concept-item {
+    flex: 0 0 90%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .section {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 0 10px;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 0.9rem;
+  }
+
+  p,
+  li {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .image-container img {
+    max-height: 300px;
+  }
+}
